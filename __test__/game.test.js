@@ -1,17 +1,6 @@
 const Game = require('../src/game').default
 const fs = require('fs')
 
-describe('App', () => {
-  it('Contains the compiled JavaScript', async () => {
-    try {
-      const data = await fs.readFile('./public/main.js', 'utf8')
-      expect(data).toMatchSnapshot()
-    } catch (error) {
-      expect(error).toBe(null)
-    }
-  })
-})
-
 describe('Game', () => {
   let game, p1, p2
   beforeEach(() => {
